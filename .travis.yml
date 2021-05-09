@@ -6,4 +6,4 @@ before_install:
   - docker build -t gaganbhullar/frontend -f Dockerfile.dev .
 
 script:
-  - docker run gaganbhullar/frontend npm run test -- --coverage
+  - docker run -e CI=true gaganbhullar/frontend npm run test
